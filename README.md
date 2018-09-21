@@ -2,6 +2,8 @@
 
 [炫酷拖拽照片墙](https://sensems.github.io/various%20Demo/Drag the photo wall/)
 
+[口风琴效果展示](https://sensems.github.io/various%20Demo/Mouth organ/)
+
 [jQuery垃圾桶](https://sensems.github.io/various%20Demo/jQuery-Trash/) 
 
 [jQuery轮播图](https://sensems.github.io/various%20Demo/jQuery-slideshow/) 
