@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <ul class="num">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div class="allImg">
+            <img src="./img/banner1.png" />
+            <img src="./img/banner2.png" />
+            <img src="./img/banner3.png" />
+        </div>
+        <div class="btm_left">上一张</div>
+        <div class="btm_right">下一张</div>
+    </div>
+</body>
+<script>
+    $(function () {
+        var i = 0;
+        var imgWidth = $(".allImg img").width();
+        var firstImgClone = $(".allImg img").first().clone();
+        $(".allImg").append(firstImgClone);
+        var imgLength = $(".allImg img").length;
+        $(".num li").first().addClass("on");
+        $(".num li").addClass("out");
+        var timer = setInterval(function () {
+            i++;
+            console.log("这是定时器的", i)
+            move();
+        }, 1500);
+
+        $("#wrap").hover(function(){
+            clearInterval(timer)
+        },function(){
+            timer = setInterval(function () {
+                i++;
+                console.log("这是定时器的", i)
+                move();
+            }, 1500);
+        })
+        
+        $(".btm_left").click(function(){
+            i--;
+            move();
+        });
+        $(".btm_right").click(function(){
+            i++;
+            move();
+        });
+
+        $(".num li").hover(function(){
+            i = $(this).index()
+            $(".allImg").stop().animate({
+                left: -i * imgWidth
+            }, 1000);
+            $(this).removeClass("out").addClass("on").siblings().removeClass("on").addClass("out");
+        })
+
+        function move() {
+            if (i == imgLength) {
+                $(".allImg").css({
+                    left: 0
+                });
+                i = 1;
+            };
+            if (i == -1) {
+                $(".allImg").css({
+                    left: -(imgLength - 1) * imgWidth
+                });
+                i = imgLength - 2;
+            }
+            $(".allImg").stop().animate({
+                left: -i * imgWidth
+            }, 1000);
+
+            if (i == imgLength - 1) {
+                $(".num li").eq(0).removeClass("out").addClass("on").siblings().removeClass("on").addClass("out");
+            } else {
+                $(".num li").eq(i).removeClass("out").addClass("on").siblings().removeClass("on").addClass("out");
+            }
+        }
+    });
+</script>
+
+</html>
