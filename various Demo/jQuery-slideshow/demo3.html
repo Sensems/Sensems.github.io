@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 150px auto;
+            /* overflow: hidden; */
+        }
+
+        #wrap {
+            position: absolute;
+            width: 3600px;
+            height: 400px;
+            transform: translateX(0);
+            transition: 1s;
+
+        }
+
+        #wrap img {
+            height: 400px;
+            width: 400px;
+            display: block;
+            float: left;
+        }
+
+        ul {
+            position: absolute;
+            float: left;
+            z-index: 999;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        ul li {
+            float: left;
+            margin-left: 10px;
+            font-size: 25px;
+            color: white;
+        }
+
+        ul li:nth-child(1) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="wrap">
+            <img src="img/1.jpg"></img>
+            <img src="img/2.jpg"></img>
+            <img src="img/3.jpg"></img>
+            <img src="img/4.jpg"></img>
+            <img src="img/5.jpg"></img>
+            <img src="img/6.jpg"></img>
+            <img src="img/7.jpg"></img>
+            <img src="img/8.jpg"></img>
+            <img src="img/1.jpg"></img>
+        </div>
+    </div>
+</body>
+<script>
+    var _wrap = document.getElementById("wrap");
+    var i=0;
+    var k=1;
+    setInterval(function(){
+        i=i-400*k;
+        _wrap.style.transform="translate("+i+"px)"
+        if(i<=-3200||i>=0){
+            k*=-1;
+        }
+    },1000);
+</script>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 150px auto;
+            /* overflow: hidden; */
+        }
+
+        #wrap {
+            position: absolute;
+            width: 3600px;
+            height: 400px;
+            transform: translateX(0);
+            transition: 1.5s;
+
+        }
+
+        #wrap img {
+            height: 400px;
+            width: 400px;
+            display: block;
+            float: left;
+        }
+
+        ul {
+            position: absolute;
+            float: left;
+            z-index: 999;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        ul li {
+            float: left;
+            margin-left: 10px;
+            font-size: 25px;
+            color: white;
+        }
+
+        ul li:nth-child(1) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- <ul>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul> -->
+        <div id="wrap">
+            <img src="img/1.jpg"></img>
+            <img src="img/2.jpg"></img>
+            <img src="img/3.jpg"></img>
+            <img src="img/4.jpg"></img>
+            <img src="img/5.jpg"></img>
+            <img src="img/6.jpg"></img>
+            <img src="img/7.jpg"></img>
+            <img src="img/8.jpg"></img>
+            <img src="img/1.jpg"></img>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var owrap = document.getElementById("wrap");    
+    var _img = owrap.children;
+    //用封装好的方法获取ID名为wrap中的css属性
+    var style = getCurrentStyle(owrap);
+    //在css属性中再获取属性transition中的过度时间
+    var transition_sec = style["transition"][4];
+    transition_sec=parseInt(transition_sec);
+    //轮播图向左移动的函数
+    var bbg = function(){
+        var i = 0,j = 0;
+        var timer = setInterval(function(){
+            i-=400;
+            owrap.style.transform = "translateX("+ i +"px)";
+            if (i == (-3200)) {
+                // owrap.style.transform = "translateX(-3200px)";
+                clearInterval(timer); 
+            }
+        },1000*transition_sec);
+    }
+    //轮播图向右移动的函数
+    var dbb = function(){
+        var k=-3600;
+        var timer1 = setInterval(function(){
+            k+=400;
+            owrap.style.transform = "translateX("+ k +"px)";
+            if (k == 0) {
+                // owrap.style.transform = "translateX(-3200px)";
+                clearInterval(timer1); 
+            }
+            console.log("k"+k)
+        },1000*transition_sec);
+    }
+    //用延时函数setTimeout让图向左滚完后再向右滚
+    var dbb2 = function(){
+        bbg();
+        setTimeout(function(){
+            dbb();
+        },(_img.length-(1*transition_sec+1))*1000*transition_sec)
+    }   
+
+    //用周期函数setInterval函数来让它循环滚动
+    dbb2();
+    setInterval(function(){
+        dbb2();
+    },((_img.length-(1*transition_sec))*1000*transition_sec)*2)
+
+    
+    //封装了取得外联样式表中取得属性的方法
+    function getCurrentStyle(node) {
+    var style = null;
+        if(window.getComputedStyle) {
+            style = window.getComputedStyle(node, null);
+        }else{
+            style = node.currentStyle;
+        }
+        return style;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var timer = setInterval(function () {
+
+    //     j++;i -= 400;
+    //     owrap.style.transform = "translateX(" + i + "px)";
+
+    //     // _li[j].style.color = "blue";
+    //     // _li[j - 1].style.color = "white";
+
+    //     // if (j == 1) {
+    //     //     _li[8].style.color = "white";
+    //     // }
+
+    //     console.log(i);
+    //     if (i == (-3200)) {
+    //         j=0;
+    //         i=0;    
+    //         // var timer1=setInterval(function () {
+    //         // this.i += 400;
+    //         // console.log(this.i);
+    //         // this.owrap.style.transform = "translateX(" + i + "px)";
+    //         // },1000)
+    //         // return timer();
+    //     };
+    // }, 1000);
+    
+
+</script>
+
+</html>

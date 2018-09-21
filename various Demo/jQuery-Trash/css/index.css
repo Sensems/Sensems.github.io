@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../img/window.jpg") no-repeat top left;
+    overflow: hidden;
+}
+.rubbish{
+    position: absolute;
+    width: 266px;
+    height: 256px;
+    bottom: 0px;
+    right: 0px;
+    background-image: url("../img/ru.png");
+}
+img{
+    position: absolute;
+}

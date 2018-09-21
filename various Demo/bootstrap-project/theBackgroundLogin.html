@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 500px;
+            height: 340px;
+            margin: 200px auto;
+            border-radius: 15px 0 15px 0;
+            box-shadow: -3px 5px 5px 3px #bbb;
+            animation: bbg 1s 1 ;
+        }
+        .header{
+            height: 40px;
+            background-color: #337AB6;
+            margin-bottom: 40px;
+            border-radius: 15px 0 15px 0;
+        }
+        .btn{
+            width: 60%;
+            margin-left: 25px;
+        }
+        h3{
+            color: #fff;
+            padding: 0;
+            margin: 8px;
+        }
+        @media screen and (max-width: 762px) {
+            label{
+                display: none;
+            }
+            form{
+                text-align: center;
+            }
+            .container{
+                width: 85%;
+            }
+            .btn{
+                width: 70%;
+            }
+        }
+        .modal{
+            top:35%;
+        }
+        .yzm{
+            margin-left: -15px;
+        }
+        @keyframes bbg {
+            from{
+                margin-top:-500px;
+            }
+            to{
+                margin-top:200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 header">
+                <h3>用户登录</h3>
+            </div>
+        </div>
+        <form class="form-horizontal" action="#" method="get">
+            <div class="form-group">
+                <label for="username" class="col-xs-2 control-label">用户名:</label>
+                <div class="input-group col-md-9 col-md-offset-1 col-sm-9  col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="userName" type="text" placeholder="Username" required class="form-control" data-trigger="focus" data-toggle="tooltip" data-placemant="top" title="请输入用户名" id="username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-xs-2 control-label">密码:</label>
+                <div class="input-group col-md-9 col-md-offset-1 col-sm-9  col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                    <input id="passWord" type="password" class="form-control" required data-trigger="focus" data-toggle="tooltip" data-placemant="top" title="请输入密码" id="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="validation" class="col-xs-2 control-label ">验证码:</label>
+                <div class="col-xs-4 yzm">
+                    <div class="input-group">
+                        <span class="input-group-addon" aria-hidden="true"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+                        <input type="text" class="form-control" data-trigger="focus" required data-toggle="tooltip" data-placemant="top" title="请输入验证码" id="validation">
+                    </div>
+                </div>
+                <div class=" col-xs-2">
+                    <img src="https://passport.baidu.com/cgi-bin/genimage?njG3706e2bc4d10dee4025d15fdde01cd130e43a6062f01001b">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-5 col-xs-offset-1">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Login in</button>
+                    <!--<button type="reset" class="btn btn-warning">Reset</button>-->
+                </div>
+                <div class="col-xs-5">
+                    <button type="reset" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg">Reset</button>
+                    <!--<button type="reset" class="btn btn-warning">Reset</button>-->
+                </div>
+            </div>
+        </form>
+        <div class="modal fade bs-example-modal-lg" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" style="width: 100%">
+                                登录中
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+
+    })
+    $(function(){
+            $('[type="submit"]').click(function(){
+                var userName = $("#userName").val();
+                var passWord = $("#passWord").val();
+                $('[type="submit"]').button('loading');
+                $.post('http://192.168.15.2/gz0820web/login',{username:userName,password:passWord},function(data){
+                    $('.modal-body').html(data.msg);
+                    $('.modal').modal();
+                    if(data.status!=1){
+                        $(':submit').button('reset');
+                        return false;
+                    }else{
+
+                        setInterval(function(){
+                            location.href="theBackground.html";
+                        },2000);
+
+                    }
+                },'json');
+                return false;
+            });
+    });
+</script>
+
+</html>

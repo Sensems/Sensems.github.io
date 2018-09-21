@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/theBackground.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#topMenu">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </button>
+
+                <a href="#" class="navbar-brand">后台管理</a>
+            </div>
+            <div class="collapse navbar-collapse" id="topMenu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">内容管理 </a></li>
+                    <li><a href="#">用户管理</a></li>
+                    <li><a href="#">客户管理</a></li>
+                    <li><a href="#">栏目管理</a></li>
+                    <li><a href="#">产品管理</a></li>
+                    <li><a href="#">订单处理</a></li>
+                    <li><a href="demo.html">bootstrap网站</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown">管理操作<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">个人信息</a></li>
+                            <li><a href="">修改密码</a></li>
+                            <li><a href="">上传头像</a></li>
+                            <li><a href="">站内信息<span class="badge">10</span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="theBackgroundLogin.html">退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text navbar-right">欢迎<a href="" class="navbar-link">xx</a>登录</p>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-md-2 leftNav hidden-xs">
+                <ul class="nav navbar downList">
+                    <li><a href="#show1" data-toggle="collapse"><span class="btn glyphicon glyphicon-user"></span>用户管理<span class="btn glyphicon glyphicon-chevron-down
+ pull-right"></span></a>
+                        <div class="list-group collapse" id="show1">
+                            <a class="list-group-item" data-toggle="tab" href="#addUser"><span class="glyphicon glyphicon-plus"></span>添加用户</a>
+                            <a class="list-group-item" href=""><span class="glyphicon glyphicon-minus
+"></span>删除用户</a>
+                            <a class="list-group-item" data-toggle="tab" href="#"><span class="glyphicon glyphicon-pencil"></span>修改资料</a>
+                            <a class="list-group-item" data-toggle="tab" href="#userList"><span class="
+glyphicon glyphicon-th-list"></span>用户列表</a>
+                        </div>
+                    </li>
+                    <li><a href="#show2" data-toggle="collapse"><span class="btn glyphicon glyphicon-th"></span>内容管理<span class="btn glyphicon glyphicon-chevron-down
+ pull-right"></span></a>
+                        <div class="list-group collapse" id="show2">
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                        </div>
+                    </li>
+                    <li><a href="#show3" data-toggle="collapse"><span class="btn glyphicon glyphicon-tower"></span>客户管理<span class="btn glyphicon glyphicon-chevron-down
+ pull-right"></span></a>
+                        <div class="list-group collapse" id="show3">
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                        </div>
+                    </li>
+                    <li><a href="#show4" data-toggle="collapse"><span class="btn glyphicon glyphicon-tasks"></span>栏目管理<span class="btn glyphicon glyphicon-chevron-down
+ pull-right"></span></a>
+                        <div class="list-group collapse" id="show4">
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                        </div>
+                    </li>
+                    <li><a href="#show5" data-toggle="collapse"><span class="btn glyphicon glyphicon-inbox"></span>产品管理<span class="btn glyphicon glyphicon-chevron-down
+ pull-right"></span></a>
+                        <div class="list-group collapse" id="show5">
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                            <a class="list-group-item" href="">好好好好</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 tab-content content">
+                <div class="container tab-pane" id="addUser">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>添加用户</h2>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">账号:</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">密码:</label>
+                                    <div class="col-sm-7">
+                                        <input type="password" class="form-control" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="panel-footer">
+                            <button class="btn btn-primary">确认添加</button>
+                            <button class="btn btn-warning">清空数据</button>
+                        </div>
+                        </div>
+                    </div>
+                <div class="container tab-pane" id="userList">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>用户列表</h2>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>用户名</option>
+                                        <option>编号</option>
+                                        <option>性别</option>
+                                        <option>年龄</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" />
+                                    <span  class="input-group-addon"><button class="btn btn-primary">搜索</button></span>
+                                    <!--<button type="submit" class="btn btn-primary ">搜索</button>-->
+                                    <!--<input type="submit" class="input-group-addon" value="搜索">-->
+                                </div>
+                            </form>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>用户名</th>
+                                    <th>性别</th>
+                                    <th>年龄</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="pagination">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    function getUser($page){
+        $.get('http://192.168.15.2/gz0820web/users',{page:$page},function(data){
+            var users=data.data;
+            if(users.length>0) $('tbody').empty();
+            for(var i in users){
+                users[i].gender==1 ?　users[i].gender="男" : users[i].gender="女";
+                var tr=$('<tr/>').appendTo('tbody');
+                $('<td/>').html(users[i].id).appendTo(tr);
+                $('<td/>').html(users[i].username).appendTo(tr);
+                $('<td/>').html(users[i].gender).appendTo(tr);
+                $('<td/>').html(users	[i].age).appendTo(tr);
+            }
+            if(users.length>0) $('.pagination').empty();
+            var pageing='';
+            for(var i=1;i<=data.last_page;i++){
+                if( i == data.current_page){
+                    pageing+='<li class="active"><a href="javascript:void(0)">'+i+'</a></li>';
+                    continue;
+                }
+                pageing+='<li><a href="javascript:getUser('+i+')">'+i+'</a></li>';
+
+            }
+            $('.pagination').html(pageing);
+        },'json');
+    }
+//    $(function(){
+//        getUser(1);
+//        $(".downList>li").each(function(i,e){
+//            $(e).click(function(){
+//                if($(".downList>li>a>span:eq(1)").attr("class")=="btn glyphicon glyphicon-chevron-down pull-right"){
+//                    $(".downList>li>a>span:eq(1)").attr("class","btn glyphicon glyphicon-chevron-down pull-right")
+//                }else{
+//                    $(".downList>li>a>span:eq(1)").attr("class","btn glyphicon glyphicon-chevron-up pull-right")
+//                }
+////                console.log($(".downList>li>a>span:eq(0)").attr("class"))
+//            })
+//        })
+//    });
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow: hidden;
+            background-color:black;
+        }
+        #perspective{
+            perspective: 1000px;
+        }
+        #wrap{ 
+            position: relative;
+            width: 133px;
+            height: 200px;
+            border:1px solid #9d32b8;
+            margin: 150px auto;
+            transform-style: preserve-3d; 
+            transform: rotateX(-25deg) rotateY(0deg);
+            /* transition: all 3s;   */
+            
+        }
+        img{
+            box-shadow:0px 0px 20px #9d32b8;
+            position: absolute; 
+            transition: all 1s; 
+            -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
+        }
+    </style>
+</head>
+<body>
+    <div id="perspective">
+        <div id="wrap">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+            <img src="img/6.jpg" alt="">
+            <img src="img/7.jpg" alt="">
+            <img src="img/8.jpg" alt="">
+            <img src="img/9.jpg" alt="">
+            <img src="img/10.jpg" alt="">
+            <img src="img/11.jpg" alt="">
+    </div>
+</body>
+<script type="text/javascript">
+    var img_num = document.getElementsByTagName("img");
+    var deg = 360/img_num.length;
+    window.onload=function(){ 
+        for(var i = 0;i<img_num.length;i++){
+            img_num[i].style.transform="rotateY("+(i*deg)+"deg)translateZ(350px)";
+            img_num[i].style.transitionDelay=(img_num.length-i)*0.2+"s";
+        }
+    }
+    var downX,downY,beforemoveX,beforemoveY,aftermoveX,aftermoveY;
+    var rotate_x=-25;
+    var rotate_y=0;
+    var oWrap = document.getElementById("wrap");
+    document.onmousedown=function(event){
+        downX = event.clientX;
+        downY = event.clientY;
+
+        this.onmousemove=function(event){
+            
+            beforemoveX = event.clientX;
+            beforemoveY = event.clientY;
+
+            aftermoveX = beforemoveX - downX;
+            aftermoveY = beforemoveY - downY;
+
+            rotate_x -=aftermoveY*0.2;          // console.log("qqw"+ oWrap.style.transform);
+            rotate_y +=aftermoveX*0.1;          // console.log("qqw"+ oWrap.style.transform);
+            oWrap.style.transform="rotateX("+rotate_x+"deg)  rotateY("+rotate_y+"deg)";
+        
+            downX = beforemoveX;
+            downY = beforemoveY;
+        }
+
+        this.onmouseup=function(event){
+            this.onmousemove=null;
+            var timer = setInterval(function(){
+                    aftermoveX*=0.95;  
+                    aftermoveY*=0.95;  
+                    rotate_x -=aftermoveY*0.2;          
+                    rotate_y +=aftermoveX*0.2;          
+                    oWrap.style.transform="rotateX("+rotate_x+"deg)  rotateY("+rotate_y+"deg)";
+            if(Math.abs(aftermoveX)<0.1 && Math.abs(aftermoveY)<0.1){
+                    clearInterval(timer);
+                }
+            },13)
+        }
+    }
+</script>
+</html>

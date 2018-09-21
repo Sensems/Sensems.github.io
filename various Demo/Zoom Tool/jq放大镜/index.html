@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            float: left;
+        }
+
+        .small {
+            position: relative;
+            width: 350px;
+            height: 449px;
+            background: url("img/small.jpg") no-repeat;
+            overflow: hidden;
+        }
+
+        .big {
+            width: 350px;
+            height: 449px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        .big img{
+            position: absolute;
+        }
+        .move {
+            width: 90px;
+            height: 120px;
+            background-color: rgba(0, 0, 0, .5);
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="small">
+        <div class="move"></div>
+    </div>
+    <div class="big">
+        <img src="img/big.jpg" />
+    </div>
+</body>
+<script>
+    $(function () {
+        
+        $(".small").on("mousemove", function (e) {
+            var moveWidth = $(".move").width();
+            var moveHeight = $(".move").height();
+            $(".big").css("display", "block")
+            $(".move").css("display", "block")
+            var x = e.pageX;
+            var y = e.pageY;
+            console.log("x:", x, "y:", y)
+            $(".move").css({
+                left: x - (moveHeight / 2),
+                top: y - (moveWidth / 2) 
+            });
+            $(".big img").css({
+                left: -(x+20)*1.2,
+                top: -(y+20)*1.2
+            })
+        }).on("mouseleave",function(){
+            $(".big").css("display", "none")
+            $(".move").css("display", "none")
+        })
+    });
+</script>
+
+</html>
