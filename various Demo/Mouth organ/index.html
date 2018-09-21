@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin: 0;
+        }
+        .box1{
+            width: 1600px;
+            height: 400px;
+            margin: 100px auto;
+            /*background: red;*/
+            overflow: hidden;
+        }
+        .box1 ul{
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        /*.box1:hover li{
+            width: 124px;
+        }*/
+        .box1 li:hover div{
+            line-height: 40px;
+            width: 100%;
+        }
+        .box1 li{
+            position: relative;
+            list-style: none;
+            width: 266.6px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            transition: 0.5s;
+        }
+        .box1 ul li:hover{
+            width: 980px;
+        }
+        img{
+            height: 400px;
+            width: 980px;
+        }
+        .top_content,.bottom_content{
+            width: 100%;
+            text-align: center;
+            line-height: 400px;
+            background-color: rgba(0,0,0,0.6);
+            position: absolute;
+            color: white;
+            transition: 0.5s;
+        }
+        .top_content{
+            top: 0;
+            left: 0;
+        }
+        .bottom_content{
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <ul class="ul1">
+        <li>
+            <img src="img/1.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+        <li>
+            <img src="img/2.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+        <li>
+            <img src="img/3.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+        <li>
+            <img src="img/4.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+        <li>
+            <img src="img/5.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+        <li>
+            <img src="img/6.jpg"/>
+            <div class="top_content">鼠标移入展示</div>
+            <div class="bottom_content">鼠标移入展示</div>
+        </li>
+    </ul>
+</div>
+</html>
