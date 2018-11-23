@@ -1,0 +1,635 @@
+{
+    "cinemas": [
+        {
+            "id": 2158,
+            "mark": 0,
+            "nm": "烽禾影城(科学城店)",
+            "sellPrice": "23",
+            "addr": "黄埔区科学城科学大道193号高德汇购物中心5层（近创意大厦）",
+            "distance": "600m",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallType": [
+                    "DTS:X 临境音厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "DTS:X 临境音厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减10元"
+            }
+        },
+        {
+            "id": 13388,
+            "mark": 0,
+            "nm": "万达影城(萝岗万达广场店)",
+            "sellPrice": "24.5",
+            "addr": "黄埔区科丰路89号萝岗万达广场娱乐楼四层",
+            "distance": "900m",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "IMAX厅",
+                    "儿童厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "IMAX厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "儿童厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "折扣卡限时¥29.9促销开卡"
+            }
+        },
+        {
+            "id": 24285,
+            "mark": 0,
+            "nm": "左岸国际影城(萝岗店)",
+            "sellPrice": "34",
+            "addr": "黄埔区开创大道3327号东方汇广场四楼",
+            "distance": "2.8km",
+            "tag": {
+                "allowRefund": 1,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallType": [
+                    "4K厅",
+                    "巨幕厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "4K厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "巨幕厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减2元"
+            }
+        },
+        {
+            "id": 25227,
+            "mark": 0,
+            "nm": "佳影国际影城(萝岗香雪店)",
+            "sellPrice": "28",
+            "addr": "黄埔区锐丰中心5号楼三层（地铁6号线香雪站F出口）",
+            "distance": "4.5km",
+            "tag": {
+                "allowRefund": 1,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallType": [
+                    "杜比全景声厅",
+                    "儿童厅",
+                    "4K厅",
+                    "4D厅",
+                    "巨幕厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "杜比全景声厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "儿童厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "4K厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "4D厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "巨幕厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减7元"
+            }
+        },
+        {
+            "id": 13963,
+            "mark": 0,
+            "nm": "中数华昇巨幕影城(萝岗店)",
+            "sellPrice": "29",
+            "addr": "黄埔区飞晟二街6号301房（地铁6号线香雪站E出口）",
+            "distance": "4.7km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "CGS中国巨幕厅",
+                    "杜比全景声厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "CGS中国巨幕厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "杜比全景声厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减8元"
+            }
+        },
+        {
+            "id": 44,
+            "mark": 0,
+            "nm": "大地影院(奥体高德美居店)",
+            "sellPrice": "30.9",
+            "addr": "天河区奥体南路12号高德美居家居馆3楼（近天河百货）",
+            "distance": "5.7km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "限时¥19.9促销开卡，首单更优惠"
+            }
+        },
+        {
+            "id": 15782,
+            "mark": 0,
+            "nm": "中影环球影城(珠村店)",
+            "sellPrice": "28",
+            "addr": "天河区中山大道1088号博裕广场3楼（珠村BRT公交站和乐购旁边）",
+            "distance": "6.6km",
+            "tag": {
+                "allowRefund": 1,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1
+            },
+            "promotion": {}
+        },
+        {
+            "id": 25103,
+            "mark": 0,
+            "nm": "DY影城(漫广场LUXE店)",
+            "sellPrice": "29",
+            "addr": "天河区中山大道1242号漫广场5楼",
+            "distance": "6.7km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "杜比全景声厅",
+                    "LUXE巨幕厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "杜比全景声厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "LUXE巨幕厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1
+            },
+            "promotion": {}
+        },
+        {
+            "id": 89,
+            "mark": 0,
+            "nm": "金逸影城(黄埔惠润店)",
+            "sellPrice": "40",
+            "addr": "黄埔区黄埔东路298号惠润广场4楼",
+            "distance": "7.1km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "60帧厅"
+                ],
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减6元"
+            }
+        },
+        {
+            "id": 184,
+            "mark": 0,
+            "nm": "喜洋时代影城(东圃四季荟店)",
+            "sellPrice": "23",
+            "addr": "天河区东圃大马路4号（近东圃购物中心）",
+            "distance": "7.6km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "巨幕厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "巨幕厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减9元"
+            }
+        },
+        {
+            "id": 9363,
+            "mark": 0,
+            "nm": "车陂国际影城",
+            "sellPrice": "23",
+            "addr": "天河区中山大道87号苏宁生活广场3楼（靠近车陂地铁站D出口，车陂BRT站）",
+            "distance": "7.7km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1
+            },
+            "promotion": {}
+        },
+        {
+            "id": 196,
+            "mark": 0,
+            "nm": "东圃摩登电影城(东圃大马路店)",
+            "sellPrice": "23",
+            "addr": "天河区东圃大马路14号东圃摩登城3楼（近红十字医院）",
+            "distance": "7.9km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减10元"
+            }
+        },
+        {
+            "id": 16362,
+            "mark": 0,
+            "nm": "龙影国际影城(棠下店)",
+            "sellPrice": "23",
+            "addr": "天河区棠德南路44号乐天棠德广场2楼",
+            "distance": "8.6km",
+            "tag": {
+                "allowRefund": 1,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1
+            },
+            "promotion": {}
+        },
+        {
+            "id": 15966,
+            "mark": 0,
+            "nm": "哈艺时尚影城(合生骏景店)",
+            "sellPrice": "24",
+            "addr": "天河区中山大道西1138号合生骏景广场三楼",
+            "distance": "8.9km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减3元"
+            }
+        },
+        {
+            "id": 12406,
+            "mark": 0,
+            "nm": "哈艺时尚影城(天河科韵店)",
+            "sellPrice": "24",
+            "addr": "天河区棠安路288号天盈创意园一楼",
+            "distance": "9km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "开卡特惠，首单2张立减3元"
+            }
+        },
+        {
+            "id": 24226,
+            "mark": 0,
+            "nm": "中影南方ONE影城",
+            "sellPrice": "24",
+            "addr": "天河区中山大道西1132号汇鑫大厦一楼",
+            "distance": "9km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallType": [
+                    "DTS:X 临境音厅",
+                    "儿童厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "DTS:X 临境音厅",
+                        "url": ""
+                    },
+                    {
+                        "name": "儿童厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1
+            },
+            "promotion": {}
+        },
+        {
+            "id": 25811,
+            "mark": 0,
+            "nm": "广州期遇·Ta电影城黄埔古港店",
+            "sellPrice": "30",
+            "addr": "海珠区黄埔村村口6号自编之一铺（北帝庙旁）",
+            "distance": "10.1km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 0
+            },
+            "promotion": {}
+        },
+        {
+            "id": 25545,
+            "mark": 0,
+            "nm": "龙洞巨幕影城",
+            "sellPrice": "38.9",
+            "addr": "天河区迎龙路163号弘马众创城1楼（九龙城旁，橙子酒店对面）",
+            "distance": "10.2km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 1,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "限时¥22.9促销开卡，首单更优惠,开卡即赠价值¥48元礼包"
+            }
+        },
+        {
+            "id": 1674,
+            "mark": 0,
+            "nm": "大地影院(广州东区时代城)",
+            "sellPrice": "38.9",
+            "addr": "黄埔区荔联街宏明路263号东区时代城4楼",
+            "distance": "10.4km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallTypeVOList": [],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "限时¥19.9促销开卡，首单更优惠"
+            }
+        },
+        {
+            "id": 16769,
+            "mark": 0,
+            "nm": "万达影城(万胜围店)",
+            "sellPrice": "39.5",
+            "addr": "海珠区新港东路1236号万胜广场五层",
+            "distance": "10.7km",
+            "tag": {
+                "allowRefund": 0,
+                "buyout": 0,
+                "cityCardTag": 0,
+                "deal": 0,
+                "endorse": 0,
+                "hallType": [
+                    "IMAX厅"
+                ],
+                "hallTypeVOList": [
+                    {
+                        "name": "IMAX厅",
+                        "url": ""
+                    }
+                ],
+                "sell": 1,
+                "snack": 1,
+                "vipTag": "折扣卡"
+            },
+            "promotion": {
+                "cardPromotionTag": "折扣卡限时¥29.9促销开卡"
+            }
+        }
+    ],
+    "ct_pois": [
+        {
+            "ct_poi": "936879945111165696_a2158_c0",
+            "poiid": 1425678
+        },
+        {
+            "ct_poi": "936879945111165696_a13388_c1",
+            "poiid": 40592098
+        },
+        {
+            "ct_poi": "936879945111165696_a24285_c2",
+            "poiid": 164084093
+        },
+        {
+            "ct_poi": "936879945111165696_a25227_c3",
+            "poiid": 168923102
+        },
+        {
+            "ct_poi": "936879945111165696_a13963_c4",
+            "poiid": 73640403
+        },
+        {
+            "ct_poi": "936879945111165696_a44_c5",
+            "poiid": 655896
+        },
+        {
+            "ct_poi": "936879945111165696_a15782_c6",
+            "poiid": 93957150
+        },
+        {
+            "ct_poi": "936879945111165696_a25103_c7",
+            "poiid": 165641526
+        },
+        {
+            "ct_poi": "936879945111165696_a89_c8",
+            "poiid": 2554553
+        },
+        {
+            "ct_poi": "936879945111165696_a184_c9",
+            "poiid": 1051614
+        },
+        {
+            "ct_poi": "936879945111165696_a9363_c10",
+            "poiid": 5602950
+        },
+        {
+            "ct_poi": "936879945111165696_a196_c11",
+            "poiid": 2521113
+        },
+        {
+            "ct_poi": "936879945111165696_a16362_c12",
+            "poiid": 103842113
+        },
+        {
+            "ct_poi": "936879945111165696_a15966_c13",
+            "poiid": 99328362
+        },
+        {
+            "ct_poi": "936879945111165696_a12406_c14",
+            "poiid": 42198484
+        },
+        {
+            "ct_poi": "936879945111165696_a24226_c15",
+            "poiid": 163370714
+        },
+        {
+            "ct_poi": "936879945111165696_a25811_c16",
+            "poiid": 182628764
+        },
+        {
+            "ct_poi": "936879945111165696_a25545_c17",
+            "poiid": 168867258
+        },
+        {
+            "ct_poi": "936879945111165696_a1674_c18",
+            "poiid": 2373240
+        },
+        {
+            "ct_poi": "936879945111165696_a16769_c19",
+            "poiid": 150027234
+        }
+    ],
+    "paging": {
+        "hasMore": true,
+        "limit": 20,
+        "offset": 0,
+        "total": 199
+    },
+    "resId": "1541991303611"
+}
